@@ -3,7 +3,17 @@
 const app = new Vue({
     el: '#app',
     data:{
-        email:'',
+        list: [
+            {
+                email:'',
+            },
+            {
+                email:'',
+            },
+            {
+                email:'',
+            },
+        ]
     },
     created() {
         this.getRandomEmail();
@@ -17,10 +27,10 @@ const app = new Vue({
             .then((response) => {
                 console.log(response);                
                 
-                this.email = response.data.response;
+                this.list.email = response.data.response;
             })
             .catch((error) =>{
-                
+
             })
         }
     }

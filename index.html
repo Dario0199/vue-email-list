@@ -11,9 +11,11 @@
 <body>
 
     <div id="app">
-        <ul>
-            <li>{{ email }}</li>
-        </ul>
+        <ol>
+            <li v-for="element in list">
+                {{ element.email }}
+            </li>
+        </ol>
     </div>
 
 
