@@ -12,11 +12,12 @@
 
     <div id="app">
         <h3>Email List</h3>
-        <ol class="list">
+        <ol class="list" v-if="list.length === 10">
             <li v-for="element in list">
                 {{ element }}
             </li>
         </ol>
+        <div class="load" v-else="">Loading</div>
     </div>
 
 
